@@ -7,16 +7,6 @@ import RNFS from 'react-native-fs';
 const App = () => {
   const [selectedMedia, setSelectedMedia] = useState(null);
 
-  //   const convertContentURIToFilePath = async contentURI => {
-  //     try {
-  //       const filePath = await RNFS.getFilePathFromURI(contentURI);
-  //       return filePath;
-  //     } catch (error) {
-  //       console.error('Error converting contentURI to filePath:', error);
-  //       return null;
-  //     }
-  //   };
-
   const openFilePicker = async () => {
     try {
       const result = await DocumentPicker.pick({
@@ -34,27 +24,6 @@ const App = () => {
       }
     }
   };
-
-  //   const shareMedia = async () => {
-  //     if (selectedMedia) {
-  //       console.log(selectedMedia);
-
-  //       const shareOptions = {
-  //         title: 'Share Media',
-  //         subject: 'Share Media Subject',
-  //         message: 'Check out this media!',
-  //         url: selectedMedia[0].uri,
-  //       };
-
-  //       Share.open(shareOptions)
-  //         .then(res => {
-  //           console.log('res', res);
-  //         })
-  //         .catch(err => {
-  //           console.error(err);
-  //         });
-  //     }
-  //   };
 
   const shareMedia = async () => {
     if (selectedMedia) {
